@@ -25,3 +25,5 @@
 ```powershell
     npm run dev
 ```
+- Remove all the unnecessary files and codes from `index.css`, `App.jsx`, `App.css`
+- Remove image from assets `react.svg`
