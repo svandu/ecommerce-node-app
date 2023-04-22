@@ -1,12 +1,10 @@
-import './App.css'
+import "./App.css";
+import NavigationBar from "./Components/NavigationBar";
 
-function App() {
-
+export default function App() {
   return (
-    <div>
-      <p>React JS</p>
-    </div>
-  )
+    <>
+      <NavigationBar />
+    </>
+  );
 }
-
-export default App
