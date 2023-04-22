@@ -1,0 +1,26 @@
+.navigation-container {
+    display: flex;
+    justify-content: space-between;
+
+    .logo-name {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 800;
+        font-size: 1.5rem;
+        margin: 25px;
+    }
+
+    .nav-links {
+        display: flex;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .nav-icons {
+        display: flex;
+        margin: -15px;
+
+        svg {
+            width: 25px;
+        }
+    }
+}
