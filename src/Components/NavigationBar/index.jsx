@@ -13,19 +13,10 @@ export default function NavigationBar() {
             <a href="#">Home</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="#">Categories</a>
           </li>
           <li>
-            <a href="#">Blog</a>
-          </li>
-          <li>
-            <a href="#">Shop</a>
-          </li>
-          <li>
-            <a href="#">Pages</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
+            <a href="#">Orders</a>
           </li>
         </ul>
       </div>
