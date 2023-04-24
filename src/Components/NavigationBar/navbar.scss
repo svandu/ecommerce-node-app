@@ -1,26 +1,54 @@
 .navigation-container {
     display: flex;
     justify-content: space-between;
-
+    padding: 10px 50px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    
     .logo-name {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-weight: 800;
         font-size: 1.5rem;
-        margin: 25px;
     }
 
     .nav-links {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 400px;
         font-size: 1rem;
         cursor: pointer;
     }
 
     .nav-icons {
         display: flex;
-        margin: -15px;
+        justify-content: space-between;
+        align-items: center;
+        width: 180px;
 
         svg {
             width: 25px;
         }
     }
+
+    .hamburger-container {
+        display: none;
+    }
 }
+
+@media(max-width: 978px) {
+    .navigation-container {
+        .nav-links {
+            display: none;
+        }
+
+        .nav-icons {
+            display: none;
+        }
+
+        .hamburger-container {
+            display: block;
+        }
+    }
+}
+
+
