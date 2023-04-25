@@ -1,7 +1,7 @@
 import './navbar.scss'
-import { ReactComponent as SearchIcon } from "../../assets/SearchIcon.svg";
-import { ReactComponent as CartIcon } from "../../assets/CartIcon.svg";
-import { ReactComponent as UserIcon } from "../../assets/UserIcon.svg";
+import { ReactComponent as SearchIcon } from "../../assets/Icons/SearchIcon.svg";
+import { ReactComponent as CartIcon } from "../../assets/Icons/CartIcon.svg";
+import { ReactComponent as UserIcon } from "../../assets/Icons/UserIcon.svg";
 import HamburgerSection from '../HamburgerSection';
 
 
