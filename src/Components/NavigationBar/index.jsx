@@ -11,7 +11,7 @@ export default function NavigationBar() {
       <p className="logo-name">Passion</p>
         <ul className="nav-links">
           <li>
-            <a href="#">Home</a>
+            <a to="#">Home</a>
           </li>
           <li>
             <a href="#">Categories</a>
