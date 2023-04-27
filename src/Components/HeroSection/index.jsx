@@ -1,4 +1,4 @@
-import shoe from "../../assets/Images/shoe5.png"
+import shoe from "../../assets/Images/shoe2.png"
 import "./herosection.scss"
 
 export default function HeroSection() {
