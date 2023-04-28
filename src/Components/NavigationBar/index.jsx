@@ -1,11 +1,15 @@
+import { useState } from 'react';
 import './navbar.scss'
 import { ReactComponent as SearchIcon } from "../../assets/Icons/SearchIcon.svg";
 import { ReactComponent as CartIcon } from "../../assets/Icons/CartIcon.svg";
 import { ReactComponent as UserIcon } from "../../assets/Icons/UserIcon.svg";
 import HamburgerSection from '../HamburgerSection';
-
+import Categories from "../Categories"
 
 export default function NavigationBar() {
+
+  const [isShown, setIsShown] = useState(false);
+
   return (
     <div className="navigation-container">
       <p className="logo-name">Passion</p>
@@ -13,9 +17,15 @@ export default function NavigationBar() {
           <li>
             <a to="#">Home</a>
           </li>
-          <li>
-            <a href="#">Categories</a>
+          <li className='category-link'>
+            <a href="#" className='categories' onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>Categories</a>
+            {isShown &&
+              (<div className='category-container'>
+                <Categories />                             
+              </div>)
+            }
           </li>
+          
           <li>
             <a href="#">Orders</a>
           </li>
@@ -37,6 +47,7 @@ export default function NavigationBar() {
             </a>
           </li>
         </ul>
+        
         <div className='hamburger-container'>
         <HamburgerSection />
         </div>

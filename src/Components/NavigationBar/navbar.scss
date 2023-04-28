@@ -13,11 +13,30 @@
 
     .nav-links {
         display: flex;
+        position: relative;
         justify-content: space-between;
         align-items: center;
         width: 400px;
         font-size: 1rem;
         cursor: pointer;
+
+        .category-link {
+            // .categories:hover{
+            //     color: blue;
+            // }
+            .category-container {
+                position: absolute;
+                right: 120px;
+                top: 60px;
+                // display: none;
+            }
+        }
+        // .category-link:hover {
+        //     .category-container{
+        //         display: block;
+        //     }
+        // }
+
     }
 
     .nav-icons {
@@ -30,6 +49,8 @@
             width: 25px;
         }
     }
+
+    
 
     .hamburger-container {
         display: none;
