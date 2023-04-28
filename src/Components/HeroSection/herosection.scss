@@ -1,12 +1,7 @@
 .hero-section-container {
     display: flex;
     justify-content: space-evenly;
-
-    .shoe-image {
-        // rotate: -20deg;
-        // width: 700px;
-    }
-
+    
     .product-details {
         padding-top: 100px;
         .product-name {
@@ -75,6 +70,8 @@
             background-color: #D21312;
         }
     }
+
+   
 }
 
 @media (max-width: 980px) {

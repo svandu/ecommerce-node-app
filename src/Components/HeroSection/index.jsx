@@ -1,6 +1,7 @@
 import shoe from "../../assets/Images/shoe2.png"
 import "./herosection.scss"
 
+
 export default function HeroSection() {
   return (
     <div className="hero-section-container">
@@ -19,6 +20,7 @@ export default function HeroSection() {
             </div>
             <button className="shop-now-btn">Shop Now</button>
         </div>
+        
     </div>
   )
 }
