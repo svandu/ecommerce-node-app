@@ -1,12 +1,10 @@
 import "./App.css";
-import HeroSection from "./Components/HeroSection";
-import NavigationBar from "./Components/NavigationBar";
+import HomePage from "./Components/HomePage";
 
 export default function App() {
   return (
     <>
-      <NavigationBar />
-      <HeroSection />
+      <HomePage />
     </>
   );
 }

@@ -5,7 +5,7 @@ import "./hamburger.scss";
 
 export default function HamburgerSection() {
 
-  const [toggle, setToggle] = useState(true)
+  const [toggle, setToggle] = useState(false)
 
   return (
     <div className="hamburger-container">
