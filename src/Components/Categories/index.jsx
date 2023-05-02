@@ -1,37 +1,36 @@
-import "./categories.scss"
+import "./categories.scss";
 
 export default function Categories() {
-
   const categories = [
     {
       id: 1,
-      name: "Jackets"
+      name: "Jackets",
     },
     {
       id: 2,
-      name: "Shoes"
+      name: "Shoes",
     },
     {
       id: 3,
-      name: "Sneakers"
+      name: "Sneakers",
     },
     {
       id: 4,
-      name: "Men"
+      name: "Men",
     },
     {
       id: 5,
-      name: "Women"
-    }
-  ]
+      name: "Women",
+    },
+  ];
 
   return (
-    <div className="categories-main-container">
-      {categories.map(({name, id}) => (
+    <div className="category-container visible">
+      {categories.map(({ name, id }) => (
         <div className="product-categories" key={id}>
-            <li>{name}</li>
+          <li>{name}</li>
         </div>
       ))}
     </div>
-  )
+  );
 }
