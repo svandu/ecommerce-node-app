@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ReactComponent as HamburgerIcon } from "../../assets/Icons/HamburgerIcon.svg";
+import Categories from "../Categories";
 import "./hamburger.scss";
 
 export default function HamburgerSection() {
@@ -17,8 +18,9 @@ export default function HamburgerSection() {
         <li>
           <a href="#">Home</a>
         </li>
-        <li>
-          <a href="#">Categories</a>
+        <li className="category-link">
+          <a href="#" className="categories">Categories</a>
+          <Categories />
         </li>
         <li>
           <a href="#">Orders</a>

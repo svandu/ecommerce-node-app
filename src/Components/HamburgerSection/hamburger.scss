@@ -5,7 +5,7 @@
     }
     .hamburger-links {
         display: block;
-        font-size: 1.2rem;
+        font-size: 1rem;
         width: 100%;
         position: absolute;
         left: 0;
@@ -16,6 +16,29 @@
 
         li {
             padding-top: 20px;
+        }
+
+        .category-link {
+            .category-container  {
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                background-color: #fff;
+                position: absolute;
+                font-size: 0.9rem;
+                right: 200px;
+                top: 150px;
+
+                &.visible {
+                    display: none;
+                }
+            }
+        }
+        .category-link:hover {
+            .category-container{
+
+                &.visible {
+                    display: block;
+                }
+            }
         }
     }
 }
