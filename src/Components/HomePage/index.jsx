@@ -4,10 +4,10 @@ import NavigationBar from "../NavigationBar";
 
 export default function HomePage() {
   return (
-    <div>
-        <NavigationBar />
-        <HeroSection />
-        <ContainerCards />
-    </div>
+    <>
+      <NavigationBar />
+      <HeroSection />
+      <ContainerCards />   
+    </>
   )
 }
