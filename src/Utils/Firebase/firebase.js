@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithRedirect, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { getAuth } from 'firebase/auth';
+
 const firebaseConfig = {
     apiKey: "AIzaSyBmWxRLTrKyxrDl9bqDeT8m_D2NDdKo3oQ",
     authDomain: "passion-db.firebaseapp.com",
@@ -10,12 +11,12 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
+// const firebaseApp = initializeApp(firebaseConfig);
 
-const provider = new GoogleAuthProvider();
-provider.setCustomParameters({
-prompt: "select_acount"
-});
+// const provider = new GoogleAuthProvider();
+// provider.setCustomParameters({
+// prompt: "select_acount"
+// });
 
 export const auth = getAuth();
-export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
+// export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
