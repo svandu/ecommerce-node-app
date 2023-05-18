@@ -11,7 +11,9 @@ export default function NavigationBar() {
   return (
     <>
       <div className="navigation-container">
-      <p className="logo-name">Passion</p>
+      <Link to="/">
+        <p className="logo-name">Passion</p>
+      </Link>
       <ul className="nav-links">
         <li>
           <Link to="/"> Home </Link>
