@@ -1,51 +1,56 @@
-import { useState } from "react";
-import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../firebase";
+// import { useState } from "react";
+// import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../firebase";
 
-const defaultFormFields = {
-  displaName: "",
-  email: "",
-  password: "",
-  confirmPassword: "",
-};
+// const defaultFormFields = {
+//   displaName: "",
+//   email: "",
+//   password: "",
+//   confirmPassword: "",
+// };
 
 export default function SignUp() {
-  const [formFields, setFormFields] = useState(defaultFormFields);
-  const { displayName, email, password, confirmPassword } = formFields;
+  // const [formFields, setFormFields] = useState(defaultFormFields);
+  // const { displayName, email, password, confirmPassword } = formFields;
 
-  console.log(formFields);
+  // console.log(formFields);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    if(password !== confirmPassword) {
-        alert("passwords do not match");
-        return;
-    }
+  //   if(password !== confirmPassword) {
+  //       alert("passwords do not match");
+  //       return;
+  //   }
 
-    try {
-        const { user } = await createAuthUserWithEmailAndPassword(email, password);
+  //   try {
+  //       const response = await createAuthUserWithEmailAndPassword(email, password);
 
-        // await createAuthUserWithEmailAndPassword(user, { displayName })
+  //       await createAuthUserWithEmailAndPassword(user, { displayName })
+  //     console.log(response);
 
+  //   } catch(error) {
+  //       if(error.code == 'auth/email-alredy-in-use') {
+  //           alert('cannot create ser, email already in use');
+  //       } else {
+  //           console.log('user created encountered an error', error);
+  //       }
+  //   }
+  // }
 
-    } catch(error) {
-        if(error.code == 'auth/email-alredy-in-use') {
-            alert('cannot create ser, email already in use');
-        } else {
-            console.log('user created encountered an error', error);
-        }
-    }
-  }
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormFields({ ...formFields, [name]: value });
+  // };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormFields({ ...formFields, [name]: value });
-  };
-
+  // const signUp = () => {
+  //   localStorage.clear()
+  //   window.location.reload()
+  // }
   return (
     <div>
       <h1>SignUp with your email and password</h1>
-      <form onSubmit={handleSubmit}>
+      {/* <button onClick={signUp}></button> */}
+      {/* <form onSubmit={handleSubmit}>
         <label>Display Name</label>
         <input
           type="text"
@@ -79,7 +84,7 @@ export default function SignUp() {
           value={confirmPassword}
         />
         <button type="submit">Sign Up</button>
-      </form>
+      </form> */}
     </div>
   );
 }
