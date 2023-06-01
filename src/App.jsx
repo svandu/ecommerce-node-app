@@ -4,7 +4,7 @@ import "./App.css";
 import NavigationBar from "./Components/NavigationBar";
 import HomePage from "./Components/HomePage";
 import Orders from "./Components/Orders"
-import SignIn from "./Components/SignIn";
+import Authentication from "./Components/Authentication";
 // import { AuthContextProvider } from "./Utils/Firebase/AuthContext";
 
 export default function App() {
@@ -15,7 +15,7 @@ export default function App() {
         <Route path="/" element={<NavigationBar />} >
           <Route index element={<HomePage />} />
           <Route path="/orders" element={<Orders />}/>
-          <Route path="/sign-in" element={<SignIn />}/>
+          <Route path="/auth" element={<Authentication />}/>
         </Route>
       </Routes>
     {/* </AuthContextProvider> */}
