@@ -45,7 +45,7 @@ export default function NavigationBar() {
           {/* <a href="#">
             <UserIcon />
           </a> */}
-          <Link to="/sign-in">SignIn</Link>
+          <Link to="/auth">SignIn</Link>
         </li>
       </ul>
 
