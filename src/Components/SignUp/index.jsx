@@ -1,8 +1,12 @@
-import { useState } from "react";
-import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../firebase";
-import FormInput from "../FormInput"
-import "./signup.scss"
-import Button from "../Button"
+import { useState, useContext } from "react";
+import {
+  createAuthUserWithEmailAndPassword,
+  createUserDocumentFromAuth,
+} from "../../firebase";
+import FormInput from "../FormInput";
+import "./signup.scss";
+import Button from "../Button";
+import { UserContext } from "../Context";
 
 const defaultFormFields = {
   displaName: "",
@@ -15,34 +19,39 @@ export default function SignUp() {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
 
-  console.log(formFields);
+  const {} = useContext(UserContext);
+  
+  const val = useContext(UserContext);
+  console.log('hit');
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
-  }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if(password !== confirmPassword) {
-        alert("passwords do not match");
-        return;
+    if (password !== confirmPassword) {
+      alert("passwords do not match");
+      return;
     }
 
     try {
-        const { user } = await createAuthUserWithEmailAndPassword(email, password);
+      const { user } = await createAuthUserWithEmailAndPassword(
+        email,
+        password
+      );
 
-        await createUserDocumentFromAuth(user, { displayName })
-        resetFormFields(); 
-
-    } catch(error) {
-        if(error.code === 'auth/email-already-in-use') {
-            alert('cannot create user, email already in use');
-        } else {
-            console.log('user created encountered an error', error);
-        }
+      await createUserDocumentFromAuth(user, { displayName });
+      resetFormFields();
+    } catch (error) {
+      if (error.code === "auth/email-already-in-use") {
+        alert("cannot create user, email already in use");
+      } else {
+        console.log("user created encountered an error", error);
+      }
     }
-  }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -55,7 +64,7 @@ export default function SignUp() {
       <span>SignUp with your email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput
-          label= "Display Name"
+          label="Display Name"
           type="text"
           required
           onChange={handleChange}
@@ -63,7 +72,7 @@ export default function SignUp() {
           value={displayName}
         />
         <FormInput
-          label= "Email"
+          label="Email"
           type="email"
           required
           onChange={handleChange}
@@ -86,7 +95,7 @@ export default function SignUp() {
           name="confirmPassword"
           value={confirmPassword}
         />
-        <Button type='submit'>Sign Up</Button>
+        <Button type="submit">Sign Up</Button>
       </form>
     </div>
   );

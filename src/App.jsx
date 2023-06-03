@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 
 import "./App.css";
-import NavigationBar from "./Components/NavigationBar";
+import Navigation from "./Components/Navigation"
 import HomePage from "./Components/HomePage";
 import Orders from "./Components/Orders"
 import Authentication from "./Components/Authentication";
@@ -12,7 +12,7 @@ export default function App() {
     <>
     {/* <AuthContextProvider> */}
     <Routes>
-        <Route path="/" element={<NavigationBar />} >
+        <Route path="/" element={<Navigation />} >
           <Route index element={<HomePage />} />
           <Route path="/orders" element={<Orders />}/>
           <Route path="/auth" element={<Authentication />}/>
