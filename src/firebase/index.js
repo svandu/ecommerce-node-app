@@ -1,9 +1,16 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
-import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';  
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged
+} from "firebase/auth";
+import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
 // import {getAuth, GoogleAuthProvider} from "firebase/auth"
-
 
 const firebaseConfig = {
   apiKey: "AIzaSyA6APqUn7_rX7623rKk4EB5atH9gejFRfE",
@@ -23,18 +30,21 @@ export const auth = getAuth(app);
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 export const db = getFirestore();
 
-export const createUserDocumentFromAuth = async (userAuth, additionalInformation = {}) => {
-  if(!userAuth) return;
+export const createUserDocumentFromAuth = async (
+  userAuth,
+  additionalInformation = {}
+) => {
+  if (!userAuth) return;
 
-  const userDocRef = doc(db, 'users', userAuth.uid);
+  const userDocRef = doc(db, "users", userAuth.uid);
 
   // console.log(userDocRef);
 
   const userSnapshot = await getDoc(userDocRef);
-  // console.log(userSnapshot); 
-  // console.log(userSnapshot.exists()); 
+  // console.log(userSnapshot);
+  // console.log(userSnapshot.exists());
 
-  if(!userSnapshot.exists()) {
+  if (!userSnapshot.exists()) {
     const { displayName, email } = userAuth;
     const createdAt = new Date();
 
@@ -50,20 +60,18 @@ export const createUserDocumentFromAuth = async (userAuth, additionalInformation
     }
   }
   return userDocRef;
-}
+};
 
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
-  if(!email || !password) return;
-  return await createUserWithEmailAndPassword(auth, email, password)
-}
+  if (!email || !password) return;
+  return await createUserWithEmailAndPassword(auth, email, password);
+};
 
 export const sigInAuthUserWithEmailAndPassword = async (email, password) => {
-  if(!email || !password) return;
-  return await signInWithEmailAndPassword(auth, email, password)
-}
+  if (!email || !password) return;
+  return await signInWithEmailAndPassword(auth, email, password);
+};
 
 export const signOutUser = async () => await signOut(auth);
-// const app = initializeApp(firebaseConfig);
-// const auth = getAuth(app)
-// const provider = new GoogleAuthProvider();
-// export {auth, provider};
+
+export const onAuthStateChangedListner = (callback) => onAuthStateChanged(auth, callback)
