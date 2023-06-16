@@ -22,7 +22,6 @@ export default function SignUp() {
   const {} = useContext(UserContext);
   
   const val = useContext(UserContext);
-  console.log('hit');
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);

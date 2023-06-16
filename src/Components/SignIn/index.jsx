@@ -36,7 +36,6 @@ export default function SignIn() {
 
     try {
       const { user } = await sigInAuthUserWithEmailAndPassword(email, password);
-      setCurrentUser(user);
 
       resetFormFields();
     } catch (error) {
