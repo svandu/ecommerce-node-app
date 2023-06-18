@@ -10,12 +10,8 @@ import Categories from "../Categories";
 import {signOutUser} from '../../firebase'
 
 export default function NavigationBarz() {
-  const { currentUser, setCurrentUser } = useContext(UserContext);
+  const { currentUser } = useContext(UserContext);
 
-  const signOutHandler = async () => {
-    await signOutUser();
-    setCurrentUser(null);
-  }
 
   return (
     <>
@@ -51,7 +47,7 @@ export default function NavigationBarz() {
           <li>
           {
             currentUser ? (
-              <span className="nav-link" onClick={signOutHandler}>SIGN OUT</span>
+              <span className="nav-link" onClick={signOutUser}>SIGN OUT</span>
             ) : (
               <Link to="/auth">SIGN IN</Link>
             )
