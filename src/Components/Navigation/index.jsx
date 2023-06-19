@@ -35,9 +35,7 @@ export default function NavigationBarz() {
         </ul>
         <ul className="nav-icons">
           <li>
-            <a href="#">
-              <SearchIcon />
-            </a>
+            <Link to="/shop">Shop</Link>
           </li>
           <li>
             <a href="#">
