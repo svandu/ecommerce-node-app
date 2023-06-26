@@ -21,7 +21,7 @@ export default function Containers() {
         {
           id: 4,
           name: "Men",
-          img: './src/assets/Images/men.jfif',
+          img: './src/assets/Images/men.jpg',
         },
         {
           id: 5,
@@ -34,9 +34,11 @@ export default function Containers() {
     <div className="categories-container">
         {categories.map(({name, id, img}) => (
             <div className="category-container" key={id}>
-              <div className="background-image">
-                <img src={img} className="container-img"/>
+              <div className="background-image img-container">
+                <img src={img} className="background-image"/>
+                <div className="img-cover"></div>
               </div>
+              <div className="img-cover"></div>
                 <div className="category-body-container">
                   <h2>{name}</h2>
                   <p>Shop Now</p>
