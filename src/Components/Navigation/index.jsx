@@ -3,6 +3,7 @@ import { useContext } from "react";
 import "./navbar.scss";
 import CartsIcon from "../CartsIcon"
 import { UserContext } from "../Context";
+import { CartContext } from "../Context/CartContext";
 import HamburgerSection from "../HamburgerSection";
 import Categories from "../Categories";
 import CardDropdown from "../CartDropdown";
@@ -11,7 +12,7 @@ import {signOutUser} from '../../firebase'
 
 export default function NavigationBarz() {
   const { currentUser } = useContext(UserContext);
-
+  const { isCartOpen } = useContext(CartContext);
 
   return (
     <>
@@ -51,8 +52,8 @@ export default function NavigationBarz() {
   
           </li>
         </ul>
-        <CardDropdown />
-
+        {isCartOpen && <CardDropdown />}
+        
         <div className="hamburger-container">
           <HamburgerSection />
         </div>
