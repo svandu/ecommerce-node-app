@@ -1,11 +1,11 @@
 import { Outlet, Link } from "react-router-dom";
 import { useContext } from "react";
 import "./navbar.scss";
-import { ReactComponent as SearchIcon } from "../../assets/Icons/SearchIcon.svg";
-import { ReactComponent as CartIcon } from "../../assets/Icons/CartIcon.svg";
+import CartsIcon from "../CartsIcon"
 import { UserContext } from "../Context";
 import HamburgerSection from "../HamburgerSection";
 import Categories from "../Categories";
+import CardDropdown from "../CartDropdown";
 
 import {signOutUser} from '../../firebase'
 
@@ -38,9 +38,7 @@ export default function NavigationBarz() {
             <Link to="/shop">Shop</Link>
           </li>
           <li>
-            <a href="#">
-              <CartIcon />
-            </a>
+            <CartsIcon />
           </li>
           <li>
           {
@@ -53,6 +51,7 @@ export default function NavigationBarz() {
   
           </li>
         </ul>
+        <CardDropdown />
 
         <div className="hamburger-container">
           <HamburgerSection />
