@@ -24,7 +24,7 @@ export default function SignIn() {
   };
 
   const signInWithGoogle = async () => {
-    await signInWithGooglePopup();
+    await signInWithGooglePopup(); 
   };
 
   const handleSubmit = async (e) => {
