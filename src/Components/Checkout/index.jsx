@@ -37,4 +37,4 @@ export default function Checkout() {
       <span className="total">Total : ${cartTotal} </span>
     </div>
   );
-}
+} 
