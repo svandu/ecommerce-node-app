@@ -92,5 +92,40 @@ const SHOP_DATA = [
                 price: 18
             },
         ] 
+    }, 
+    {
+        title: 'Shoes',
+        items: [
+            {
+                id: 15,
+                name: "Brown Brim",
+                imageUrl: "https://i.pinimg.com/564x/e6/a1/0d/e6a10d8a5aa00777372ac4572bfc687c.jpg",
+                price: 25
+            },
+            {
+                id: 16,
+                name: "Blue Beanie",
+                imageUrl: "https://i.pinimg.com/736x/c3/98/3b/c3983b2087fd07315f11ac85157dc4a9.jpg",
+                price: 18
+            },
+            {
+                id: 17,
+                name: "Brown Cowboy",
+                imageUrl: "https://i.pinimg.com/564x/97/0e/a7/970ea70e31cb48f82d43e0db02fae00a.jpg",
+                price: 35
+            },
+            {
+                id: 18,
+                name: "Grey Brim",
+                imageUrl: "https://i.pinimg.com/564x/75/c6/23/75c623b10c9ee9f3d2c3a82d79704bf5.jpg",
+                price: 25
+            }, 
+            {
+                id: 19,
+                name: "Green Beanie",
+                imageUrl: "https://i.pinimg.com/736x/90/34/b1/9034b1d8c41a89e2a88950fc981d8d4b.jpg",
+                price: 18
+            },
+        ] 
     }
 ]
