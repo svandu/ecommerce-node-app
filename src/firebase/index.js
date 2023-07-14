@@ -7,9 +7,9 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
-  onAuthStateChanged
+  onAuthStateChanged,
 } from "firebase/auth";
-import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
+import { getFirestore, doc, setDoc, getDoc, collection, writeBatch } from "firebase/firestore";
 // import {getAuth, GoogleAuthProvider} from "firebase/auth"
 
 const firebaseConfig = {
@@ -28,13 +28,19 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
+
 export const db = getFirestore();
+
+export const addCollectionAndDocuments = (collectionKey, objetsToAdd) => {
+  const collectionRef = collection(db, collectionKey);
+  
+}
 
 export const createUserDocumentFromAuth = async (
   userAuth,
   additionalInformation = {}
 ) => {
-  if (!userAuth) return;
+  if (!userAuth) return; 
 
   const userDocRef = doc(db, "users", userAuth.uid);
 
@@ -74,10 +80,11 @@ export const sigInAuthUserWithEmailAndPassword = async (email, password) => {
 
 export const signOutUser = async () => await signOut(auth);
 
-export const onAuthStateChangedListner = (callback) => onAuthStateChanged(auth, callback);
+export const onAuthStateChangedListner = (callback) =>
+  onAuthStateChanged(auth, callback);
 
 /*
   nect: callback
   error: errorCallback
   complete: completedCallback
- */ 
+ */
