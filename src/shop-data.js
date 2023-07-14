@@ -94,7 +94,7 @@ const SHOP_DATA = [
         ] 
     }, 
     {
-        title: 'Shoes',
+        title: 'Sneakers',
         items: [
             {
                 id: 15,
@@ -127,5 +127,77 @@ const SHOP_DATA = [
                 price: 18
             },
         ] 
-    }
-]
+    },
+    {
+        title: 'Women',
+        items: [
+            {
+                id: 20,
+                name: "Brown Brim",
+                imageUrl: "https://i.pinimg.com/564x/1c/e1/6f/1ce16f35d10502920c78842cb285a6c8.jpg",
+                price: 25
+            },
+            {
+                id: 21,
+                name: "Blue Beanie",
+                imageUrl: "https://i.pinimg.com/564x/bf/11/33/bf11334e2cc61541767e3668ca7e5918.jpg",
+                price: 18
+            },
+            {
+                id: 22,
+                name: "Brown Cowboy",
+                imageUrl: "https://i.pinimg.com/564x/ff/4c/fe/ff4cfef409209f57ed1a8295d32087cc.jpg",
+                price: 35
+            },
+            {
+                id: 23,
+                name: "Grey Brim",
+                imageUrl: "https://i.pinimg.com/564x/4f/e1/c4/4fe1c490f89a66b6962e6b0ee3d62b8c.jpg",
+                price: 25
+            }, 
+            {
+                id: 24,
+                name: "Green Beanie",
+                imageUrl: "https://i.pinimg.com/564x/4f/e1/c4/4fe1c490f89a66b6962e6b0ee3d62b8c.jpg",
+                price: 18
+            },
+        ] 
+    },
+    {
+        title: 'Men',
+        items: [
+            {
+                id: 25,
+                name: "Brown Brim",
+                imageUrl: "https://i.pinimg.com/564x/14/dd/0b/14dd0bdda98b5dc84dafd2797cf3ebd7.jpg",
+                price: 25
+            },
+            {
+                id: 26,
+                name: "Blue Beanie",
+                imageUrl: "https://i.pinimg.com/564x/19/fa/94/19fa9478dfdc03baa7ca8b04f755e2a8.jpg",
+                price: 18
+            },
+            {
+                id: 27,
+                name: "Brown Cowboy",
+                imageUrl: "https://i.pinimg.com/564x/35/7c/0e/357c0ef7579f19bd46304d6ddffca332.jpg",
+                price: 35
+            },
+            {
+                id: 28,
+                name: "Grey Brim",
+                imageUrl: "https://i.pinimg.com/564x/64/e9/5b/64e95b341e704403ae93fcbd73728572.jpg",
+                price: 25
+            }, 
+            {
+                id: 29,
+                name: "Green Beanie",
+                imageUrl: "https://i.pinimg.com/564x/9e/14/a9/9e14a9dd30505ea251e6fc240fd5caf4.jpg",
+                price: 18
+            },
+        ], 
+    },
+];
+
+export default SHOP_DATA;
