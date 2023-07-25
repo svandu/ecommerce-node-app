@@ -1,4 +1,4 @@
-import ProductCard from "../ProductCard/index.jsx";
+import ProductCard from "../ProductCard";
 import "./categorypreview.scss";
 
 export default function CategoryPreview({ title, products }) {
