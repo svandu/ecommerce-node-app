@@ -3,7 +3,7 @@ import { createContext, useState, useEffect } from "react"
 import { getCategoriesAndDocuments, sigInAuthUserWithEmailAndPassword } from "../../../firebase";
 
 
-export const CategoryContext = createContext({
+export const CategoriesContext = createContext({
     categoriesMap: {},
 });
 
@@ -21,6 +21,6 @@ export const CategoriesProvider = ({children}) => {
     
     const value = { categoriesMap };
     return (
-        <CategoryContext.Provider value={value}> {children} </CategoryContext.Provider>
+        <CategoriesContext.Provider value={value}> {children} </CategoriesContext.Provider>
     )
 }

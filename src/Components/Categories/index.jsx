@@ -25,7 +25,7 @@ export default function Categories() {
   ];
 
   return (
-    <div className="category-container visible">
+    <div className="home-category-container visible">
       {categories.map(({ name, id }) => (
         <ul className="product-categories" key={id}>
           <li>{name}</li>

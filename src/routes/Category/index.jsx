@@ -4,13 +4,15 @@ import { useParams } from "react-router-dom";
 import ProductCard from "../../Components/ProductCard";
 import "./category.scss";
 
-import { categoriesContext } from "../../Components/Context/CategoriesContext";
+import { CategoriesContext } from "../../Components/Context/CategoriesContext";
+
+import "./category.scss"
 export default function Category() {
   const { category } = useParams();
-  const { categoriesMap } = useContext(categoriesContext);
+  const { categoriesMap } = useContext(CategoriesContext);
   const [products, setProducts] = useState(categoriesMap[category]);
 
-  useEffect(() => {
+  useEffect(() => {  
     setProducts(categoriesMap[category]);
   }, [category, categoriesMap]);
 
